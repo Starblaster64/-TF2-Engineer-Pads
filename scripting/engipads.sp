@@ -201,10 +201,10 @@ public void OnConfigsExecuted()
 	}
 	
 	if (cvarPads[MenuExit].IntValue == EngiPads_MenuExitOff)
-		g_bMenuExitEnabled = true;
+		g_bMenuExitEnabled = false;
 
 	if (cvarPads[MenuExit].IntValue == EngiPads_MenuExitOn || cvarPads[MenuExit].IntValue > EngiPads_MenuExitOn)
-		g_bMenuExitEnabled = false;
+		g_bMenuExitEnabled = true;
 }
 
 public void CvarChange(ConVar cvar, const char[] szOldValue, const char[] szNewValue)
