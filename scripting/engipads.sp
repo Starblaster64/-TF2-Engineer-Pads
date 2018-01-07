@@ -199,6 +199,12 @@ public void OnConfigsExecuted()
 	{
 		g_hPadTimerAnnounce = CreateTimer(cvarPads[PadsAnnounce].FloatValue, Timer_PadsAnnounce, _, TIMER_FLAG_NO_MAPCHANGE);
 	}
+	
+	if (cvarPads[MenuExit].IntValue == EngiPads_MenuExitOff)
+		g_bMenuExitEnabled = true;
+
+	if (cvarPads[MenuExit].IntValue == EngiPads_MenuExitOn || cvarPads[MenuExit].IntValue > EngiPads_MenuExitOn)
+		g_bMenuExitEnabled = false;
 }
 
 public void CvarChange(ConVar cvar, const char[] szOldValue, const char[] szNewValue)
