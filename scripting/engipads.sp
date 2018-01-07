@@ -352,16 +352,19 @@ public Action HookSound(int clients[MAXPLAYERS], int &numClients, char sample[PL
 		int &entity, int &channel, float &volume, int &level, int &pitch, int &flags,
 		char soundEntry[PLATFORM_MAX_PATH], int &seed)
 {
-	char className[64];
-	GetEntityClassname(entity, className, sizeof(className));
-	
-	if (StrEqual(className, "obj_attachment_sapper") && TF2_GetObjectType(entity) == TFObject_Sapper && channel == SNDCHAN_STATIC)
+	if (IsValidEntity(entity))
 	{
-		if (GetEntPropEnt(entity, Prop_Send, "m_hBuiltOnEntity") == -1)
+		char className[64];
+		GetEntityClassname(entity, className, sizeof(className));
+	
+		if (StrEqual(className, "obj_attachment_sapper") && TF2_GetObjectType(entity) == TFObject_Sapper && channel == SNDCHAN_STATIC)
 		{
-			if (StrEqual(sample, "weapons/sapper_timer.wav") || StrContains(sample, "spy_tape") != -1)
+			if (GetEntPropEnt(entity, Prop_Send, "m_hBuiltOnEntity") == -1)
 			{
-				return Plugin_Handled;	//I need to block the duplicate sapping sound otherwise it'll loop forever.
+				if (StrEqual(sample, "weapons/sapper_timer.wav") || StrContains(sample, "spy_tape") != -1)
+				{
+					return Plugin_Handled;	//I need to block the duplicate sapping sound otherwise it'll loop forever.
+				}
 			}
 		}
 	}
