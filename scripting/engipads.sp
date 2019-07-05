@@ -891,7 +891,7 @@ public Action TogglePadsCmd(int iClient, int nArgs)
 		return Plugin_Handled;
 	}
 	
-	bool updated = GetClientPadsEnabled(iChild)? false : true;
+	bool updated = GetClientPadsEnabled(iClient)? false : true;
 
 	if (!updated) //Enabled EngiPads
 	{
