@@ -127,6 +127,7 @@ public void OnPluginStart()
 	
 	RegConsoleCmd("sm_pad", TogglePadsMenuCmd);
 	RegConsoleCmd("sm_pads", TogglePadsMenuCmd);
+	RegConsoleCmd("sm_pad_toggle", TogglePadsCmd);
 	RegConsoleCmd("sm_pad_help", ShowPadsInfoCmd);
 	RegConsoleCmd("sm_padhelp", ShowPadsInfoCmd);
 	
@@ -881,6 +882,31 @@ int CreatePadParticle(int iPad)
 }
 
 /* Commands */
+
+public Action TogglePadsCmd(int iClient, int nArgs)
+{
+	if (!iClient)	//if client was the server console
+	{
+		ReplyToCommand(iClient, "This command can only be used in-game!");
+		return Plugin_Handled;
+	}
+	
+	bool updated = GetClientPadsEnabled(iClient)? false : true;
+
+	if (!updated) //Enabled EngiPads
+	{
+		CPrintToChat(iClient, "{orange}[EngiPads]{default} %t", "padphrase_enabled");
+	}
+	else	//Disabled EngiPads
+	{
+		CPrintToChat(iClient, "{orange}[EngiPads]{default} %t", "padphrase_disabled");
+	}
+	
+	SetClientPadsEnabled(iClient, updated);
+
+	return Plugin_Handled;
+}
+
 public Action TogglePadsMenuCmd(int iClient, int nArgs)
 {
 	if (!iClient)	//if client was the server console
