@@ -1,0 +1,79 @@
+﻿"Phrases"
+{
+	"padphrase_announcement1"
+	{
+		"ru"		"Инженерные Платформы {blue}v%s{default} от {unique}Starblaster64{default}."
+	}
+	"padphrase_announcement2"
+	{
+		"ru"		"Напишите {olive}/pad{default} включить/отключить строительство Инженерных Платформ! Напишите {olive}/pad_help{default} для большей информации."
+	}
+	"padphrase_noaccess"
+	{
+		"ru"		"У вас нет доступа к строительству Инженерных Платформ!"
+	}
+	"padphrase_enabled"
+	{
+		"ru"		"Инженерные Платформы {green}ВКЛЮЧЕНЫ{default}!"	
+	}
+	"padphrase_disabled"
+	{
+		"ru"		"Инженерные Платформы {red}ОТКЛЮЧЕНЫ{default}!"	
+	}
+	"padphrase_menutitle"
+	{
+		"ru"		"Меню Инженерных Платформ"
+	}
+	"padphrase_menuenable"
+	{
+		"ru"		"Включить"
+	}
+	"padphrase_menudisable"
+	{
+		"ru"		"Отключить"
+	}
+	"padphrase_infotitle"
+	{
+		"ru"		"=== Инженерные Платформы ==="
+	}
+	"padphrase_infogeneral"
+	{
+		"ru"		"Инженерные Платформы заменяют любые телепорты, которые вы построите. Они имеют %i ОЗ и не могут быть улучшены."
+	}
+	"padphrase_infoboost"
+	{
+		"ru"		"Ускоряющие Платформы: Увеличивает скорость движения союзников на %.1fс. Перезарядка: %.1fс."
+	}
+	"padphrase_infojump"
+	{
+		"ru"		"Прыжковые Платформы: Запускает союзников в направлении их движения. Перезарядка: %.1fс."
+	}
+	"padphrase_infoeureka"
+	{
+		"ru"		"Вы не можете использовать эффект Эврики для телепортации на любые выходы, если он был преобразован в Платформу."
+	}
+	"padphrase_infosniper"
+	{
+		"ru"		"Вы не можете прицеливаться за Снайпера во время запуска Прыжковой Платформы."
+	}
+	"padphrase_infoaiming"
+	{
+		"ru"		"You will not be boosted by Boost Pads if you are scoped in/revved up as a Sniper/Heavy."
+	}
+	"padphrase_infoexit"
+	{
+		"ru"		"Выход"
+	}
+	"padphrase_deploy"
+	{
+		"ru"		"Deploying Pad Type: {teamcolor}%t"
+	}
+	"padphrase_boost"
+	{
+		"ru"		"Усторяющий"
+	}
+	"padphrase_jump"
+	{
+		"ru"		"Прыжковый"
+	}
+}
